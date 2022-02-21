@@ -15,7 +15,10 @@ import auxiliary as aux
 # Color Palette (colorPalette): List of HEX values to be used in the 
 #   quantization of the image. Set color palette to "None" to use the 
 #   colorsNumber parameter instead.
-
+# Method (int):
+#   0 = median cut
+#   1 = maximum coverage
+#   2 = fast octree
 
 # (fld, nme) = ('./img', 'APC.png')
 (fld, nme) = ('/home/chipdelmal/Documents/PixelatorBeads', 'mech.png')
