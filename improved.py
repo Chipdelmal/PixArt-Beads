@@ -11,7 +11,7 @@ from sklearn.cluster import MiniBatchKMeans
 pth = path.join(fld, nme)
 (downscale, upscale) = ((50, 50), 10)
 COL_PLT = ['#F4F4F4', '#00852B','#040404', '#58AB41', '#969696']
-CLRS_NUM = 20
+CLRS_NUM = 4
 
 CLR = COL_PLT
 
@@ -19,7 +19,7 @@ CLR = COL_PLT
 if CLRS_NUM is None:
     rgbTuples = [ImageColor.getrgb(i) for i in CLR]
     pal = [item for sublist in rgbTuples for item in sublist]
-    entries = int(len(pal) / 3)
+    entries = int(len(pal)/3)
 
 # Open Paddington
 img = Image.open(pth).convert('RGB')

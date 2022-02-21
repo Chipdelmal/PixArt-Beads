@@ -1,47 +1,45 @@
-import cv2
-import numpy as np
+
+from os import path
 from PIL import Image
-
-def pixelateImage(img, gridSize, gridOverlay=True, gridOverlayColor=(0, 0, 0)):
-    # Run through the image and apply a mean filter function
-    for r in range(0, img.shape[0], gridSize):
-        for c in range(0, img.shape[1], gridSize):
-            block = img[r:r+gridSize, c:c+gridSize, :]
-            shp = block.shape
-            blurred = cv2.blur(block, (shp[0]*2, shp[1]*2))
-            img[r:r+gridSize, c:c+gridSize, :] = blurred
-            # Could export here if the blocks were needed
-    # Overlay the grid if requested
-    if gridOverlay is True:
-        # Add Gridlines
-        height, width, channels = img.shape
-        for x in range(0, width - 1, gridSize):
-            cv2.line(img, (x, 0), (x, height), gridOverlayColor, 1, 1)
-
-        for x in range(0, height - 1, gridSize):
-            cv2.line(img, (0, x), (width, x), gridOverlayColor, 1, 1)
-
-    return img
+from cv2 import imread, imwrite
+import colors as col
+import auxiliary as aux
 
 
-img = cv2.imread('./img/fighter.png', cv2.IMREAD_UNCHANGED)
+(fld, nme) = ('./img', 'fighter.png')
+(downscale, upscale) = ((50, 50), 10)
+(colorsNumber, colorPalette) = (None, col.COLD_WOOD)
+method = 0
 
-scaleMult = 5
-
-scale_percent = scaleMult * 100 # percent of original size
-width = int(img.shape[1]*scale_percent/100)
-height = int(img.shape[0]*scale_percent/100)
-dim = (width, height)
-
-resized = cv2.resize(img, dim, interpolation=cv2.INTER_AREA)
-
-img = cv2.cvtColor(resized, cv2.COLOR_BGR2RGB)
-im_pil = Image.fromarray(img)
-imQnt = im_pil.quantize(5, method=0)
-imQnt.save("./img/A_fighter.png")
-
-img = cv2.imread('./img/A_fighter.png')
-imgO = pixelateImage(img, scaleMult, gridOverlay=True)
-cv2.imwrite('./img/B_fighter.png', imgO)
-
-
+###############################################################################
+# Load Image
+###############################################################################
+pth = path.join(fld, nme)
+img = Image.open(pth).convert('RGB')
+###############################################################################
+# Quantize
+###############################################################################
+if colorPalette is not None:
+    cpal = aux.paletteReshape(colorPalette)
+    img = aux.quantizeImage(
+        img, colorsNumber=cpal[0], colorPalette=cpal[1], method=method
+    )
+else:
+    img = aux.quantizeImage(img, colorsNumber, method=method)
+###############################################################################
+# Downscale and Upscale
+###############################################################################
+img = img.resize(downscale, resample=Image.BILINEAR)
+upscaleSize = (upscale*downscale[0], upscale*downscale[1])
+img = img.resize(upscaleSize, Image.NEAREST)
+###############################################################################
+# Save Scaled Image
+###############################################################################
+pthUG = path.join(fld, aux.pthUG+nme)
+img.save(pthUG)
+###############################################################################
+# Add grid onto the image
+###############################################################################
+img = imread(pthUG)
+img = aux.gridOverlay(img, upscale)
+imwrite(path.join(fld, aux.pthGD+nme), img)
