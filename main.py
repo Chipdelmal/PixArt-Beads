@@ -6,10 +6,10 @@ import colors as col
 import auxiliary as aux
 
 
-(fld, nme) = ('./img', 'mech.png')
-(downscale, upscale) = ((50, 50), 10)
-(colorsNumber, colorPalette) = (10, col.GB) # col.NOSTALGIA)
-method = 0
+(fld, nme) = ('./img', 'link.png')
+(downscale, upscale) = ((25, 25), 20)
+(colorsNumber, method) = (20, 0)
+colorPalette = col.NES
 
 ###############################################################################
 # Load Image
