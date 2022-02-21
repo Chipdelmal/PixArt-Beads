@@ -23,7 +23,7 @@ NOSTALGIA = (
 
 # https://www.designpieces.com/palette/game-boy-original-color-palette-hex-and-rgb/
 GB = (
-    '#9bbc0f', '#8bac0f', '#306230', '#0f380f'
+    '#cadc9f', '#9bbc0f', '#8bac0f', '#306230', '#0f380f'
 )
 
 
@@ -55,4 +55,41 @@ NES = (
 SLSO = (
     '#0d2b45', '#203c56', '#544e68', '#8d697a', '#d08159', '#ffaa5e', 
     '#ffd4a3', '#ffecd6'
+)
+
+# https://lospec.com/palette-list/le-masteros-paletas
+MASTEROS = (
+    '#210c5c', '#760760', '#bd0463', '#ff2951', '#ff8f1b', '#ffce2f', 
+    '#fdfdfd', '#fed347', '#f5a20a', '#e66d19', '#d32b2c', '#9e093d', 
+    '#571845', '#601423', '#902b0e', '#b94b09', '#ce7923', '#e2a53b', 
+    '#f7d053', '#f8f8f8', '#fdca84', '#f6965a', '#e75f32', '#b73f2c', 
+    '#881f27', '#590023', '#005638', '#32723f', '#618c46', '#90a64d', 
+    '#b6c363', '#dae17e', '#ffff99', '#96ea6f', '#0ace37', '#00a732', 
+    '#008131', '#005d30', '#003b2f', '#062a78', '#104d95', '#1a70b3', 
+    '#2495d1', '#2ebcf1', '#72e0ff', '#d1ffff', '#a0d6ee', '#70addd', 
+    '#4185cc', '#165cb8', '#1b358c', '#401d6c', '#69358b', '#944eab', 
+    '#c168cd', '#ee84ee', '#f7bbef', '#ffedef', '#ffb9c9', '#ff7f9e', 
+    '#f93166', '#ba226b', '#7b1270', '#340075', '#4a0020', '#6f2737', 
+    '#934d4e', '#b77365', '#dd9a7c', '#ffc498', '#fffacd', '#e4db99', 
+    '#c8bc67', '#a7a041', '#72883e', '#3c703b', '#0b0b0b', '#2f2f2f', 
+    '#535353', '#7b7b7b', '#a5a5a5', '#d1d1d1', '#ffffff'
+)
+
+# https://lospec.com/palette-list/super-game-boy-menu-1-palette-a
+SGB_A = ('#ffe8cf', '#df904f', '#af2850', '#301850')
+
+# https://lospec.com/palette-list/super-game-boy-menu-1-palette-b
+SGB_B = ('#dfd8c0', '#cfb070', '#b05010', '#000000')
+
+# https://lospec.com/palette-list/super-game-boy-menu-1-palette-c
+SGB_C = ('#ffc0ff', '#ef9850', '#9f3860', '#3f389f')
+
+# https://lospec.com/palette-list/super-game-boy-menu-1-palette-d
+SGB_D = ('#fff8af', '#c0804f', '#ff0000', '#501800')
+
+# https://lospec.com/palette-list/super16
+SUPER_ST = (
+    '#902068', '#f81868', '#ffa880', '#ff7000', '#a80010', '#ffa800', 
+    '#ffffa8', '#a8e038', '#5800a8', '#6828ff', '#ffffff', '#e0d0ff', 
+    '#a070c8', '#683090', '#481868', '#000000'
 )
