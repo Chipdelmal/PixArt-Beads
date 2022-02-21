@@ -1,3 +1,9 @@
+###############################################################################
+#   Color Palettes Constants
+#       https://coolors.co/
+#       https://lospec.com/palette-list
+#       https://www.designpieces.com/palette/
+###############################################################################
 
 # https://lospec.com/palette-list/coldwood8
 COLD_WOOD = (
