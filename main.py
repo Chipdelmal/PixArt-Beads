@@ -6,9 +6,9 @@ import colors as col
 import auxiliary as aux
 
 
-(fld, nme) = ('./img', 'fighter.png')
+(fld, nme) = ('./img', 'mech.png')
 (downscale, upscale) = ((50, 50), 10)
-(colorsNumber, colorPalette) = (None, col.COLD_WOOD)
+(colorsNumber, colorPalette) = (10, col.GB) # col.NOSTALGIA)
 method = 0
 
 ###############################################################################

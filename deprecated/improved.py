@@ -5,15 +5,15 @@ import numpy as np
 from os import path
 from PIL import Image, ImageColor
 from sklearn.cluster import MiniBatchKMeans
+import colors as col
 
 (fld, nme) = ('./img', 'mech.png')
 
 pth = path.join(fld, nme)
 (downscale, upscale) = ((50, 50), 10)
-COL_PLT = ['#F4F4F4', '#00852B','#040404', '#58AB41', '#969696']
-CLRS_NUM = 4
 
-CLR = COL_PLT
+CLRS_NUM = None
+CLR = col.GB
 
 # Color palettes
 if CLRS_NUM is None:
@@ -32,12 +32,14 @@ if CLRS_NUM is None:
     resnp = np.arange(entries, dtype=np.uint8).reshape(entries, 1)
     resim = Image.fromarray(resnp, mode='P')
     resim.putpalette(palette)
-    img = img.quantize(len(COL_PLT), method=0, palette=resim, dither=False)
+    print("Test")
+    img = img.quantize(method=2, palette=resim, dither=False)
 else:
     img = img.quantize(CLRS_NUM, method=0, dither=False)
 
 # Resize smoothly down to 16x16 pixels
-img = img.resize(downscale,resample=Image.BILINEAR)
+img = img.resize(downscale, resample=Image.BILINEAR)
+img
 
 # Scale back up using NEAREST to original size
 newSize = (upscale*downscale[0], upscale*downscale[1])

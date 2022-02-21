@@ -24,7 +24,7 @@ def quantizeImage(img, colorsNumber=255, colorPalette=None, method=0, dither=Fal
         img = img.quantize(colorsNumber, method=method, dither=dither)
     else:
         img = img.quantize(
-            colorsNumber, palette=colorPalette, method=0, dither=False
+            palette=colorPalette, method=0, dither=False
         )
     return img
 
