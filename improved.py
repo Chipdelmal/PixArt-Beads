@@ -9,9 +9,9 @@ from sklearn.cluster import MiniBatchKMeans
 (fld, nme) = ('./img', 'mech.png')
 
 pth = path.join(fld, nme)
-(downscale, upscale) = ((32, 32), 10)
+(downscale, upscale) = ((50, 50), 10)
 COL_PLT = ['#F4F4F4', '#00852B','#040404', '#58AB41', '#969696']
-CLRS_NUM = 12
+CLRS_NUM = 20
 
 CLR = COL_PLT
 
