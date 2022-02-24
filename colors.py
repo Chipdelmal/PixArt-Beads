@@ -202,3 +202,48 @@ SWEETIE_16 = {
         '#f4f4f4', '#94b0c2', '#566c86', '#333c57'
     )
 }
+
+FAMICUBE = {
+    'name': 'Famicube',
+    'source': 'https://lospec.com/palette-list/famicube',
+    'palette': (
+        '#000000', '#e03c28', '#ffffff', '#d7d7d7', '#a8a8a8', '#7b7b7b', 
+        '#343434', '#151515', '#0d2030', '#415d66', '#71a6a1', '#bdffca', 
+        '#25e2cd', '#0a98ac', '#005280', '#00604b', '#20b562', '#58d332', 
+        '#139d08', '#004e00', '#172808', '#376d03', '#6ab417', '#8cd612', 
+        '#beeb71', '#eeffa9', '#b6c121', '#939717', '#cc8f15', '#ffbb31', 
+        '#ffe737', '#f68f37', '#ad4e1a', '#231712', '#5c3c0d', '#ae6c37', 
+        '#c59782', '#e2d7b5', '#4f1507', '#823c3d', '#da655e', '#e18289', 
+        '#f5b784', '#ffe9c5', '#ff82ce', '#cf3c71', '#871646', '#a328b3', 
+        '#cc69e4', '#d59cfc', '#fec9ed', '#e2c9ff', '#a675fe', '#6a31ca', 
+        '#5a1991', '#211640', '#3d34a5', '#6264dc', '#9ba0ef', '#98dcff', 
+        '#5ba8ff', '#0a89ff', '#024aca', '#00177d'
+    )
+}
+
+BLK_NEO = {
+    'name': 'Blk_Neo',
+    'source': 'https://lospec.com/palette-list/blk-neo',
+    'palette': (
+        '#000000', '#12173D', '#293268', '#464B8C', '#6B74B2', '#909EDD', 
+        '#C1D9F2', '#FFFFFF', '#FFCCD0', '#F29FAA', '#C37289', '#994C69', 
+        '#723352', '#3F1F3C', '#B22E69', '#E54286', '#FF6EAF', '#FFA5D5', 
+        '#8CFF9B', '#42BC7F', '#22896E', '#14665B', '#0F4A4C', '#0A2A33', 
+        '#1D1A59', '#322D89', '#354AB2', '#3E83D1', '#50B9EB', '#8CDAFF', 
+        '#B483EF', '#854CBF', '#5D2F8C', '#431E66', '#FFE091', '#FFAA6E', 
+        '#FF695A', '#B23C40', '#721C2F', '#A52639', '#DD3745', '#FF6675', 
+        '#78FAE6', '#27D3CB', '#00AAA5', '#008782'
+    )
+}
+
+ONE_BIT = {
+    'name': '1Bit_MonitorGlow',
+    'source': 'https://lospec.com/palette-list/1bit-monitor-glow',
+    'palette': ('#222323', '#f0f6f0')
+}
+
+BLESSING = {
+    'name': 'Blessing',
+    'source': 'https://lospec.com/palette-list/blessing',
+    'palette': ('#74569b', '#96fbc7', '#f7ffae', '#ffb3cb', '#d8bfd8')
+}

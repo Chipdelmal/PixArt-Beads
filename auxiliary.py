@@ -2,11 +2,12 @@
 #   Functions Definitions
 ###############################################################################
 
+import os
 import cv2
 import numpy as np
 from PIL import Image, ImageColor
 
-(pthUG, pthGD) = ('A_', 'B_')
+PPND = ('A_', 'B_', 'C_')
 
 def paletteReshape(colorPalette):
     # Hex to entries
@@ -31,7 +32,6 @@ def quantizeImage(img, colorsNumber=255, colorPalette=None, method=0, dither=Fal
         )
     return img
 
-
 def gridOverlay(img, gridSize, gridColor=(0,0,0)):
     img = np.asarray(img)
     (height, width, channels) = img.shape
@@ -40,3 +40,26 @@ def gridOverlay(img, gridSize, gridColor=(0,0,0)):
     for x in range(0, height-1, gridSize):
         cv2.line(img, (0, x), (width, x), gridColor, 1, 1)
     return img
+
+
+def makeFolder(path):
+    if not os.path.exists(path):
+        try:
+            os.mkdir(path)
+        except OSError:
+            raise OSError(
+                    "Can't create destination directory (%s)!" % (path)
+                )
+
+
+def isNotebook():
+    try:
+        shell = get_ipython().__class__.__name__
+        if shell == 'ZMQInteractiveShell':
+            return True   # Jupyter notebook or qtconsole
+        elif shell == 'TerminalInteractiveShell':
+            return False  # Terminal running IPython
+        else:
+            return False  # Other type (?)
+    except NameError:
+        return False      # Probably standard Python interpreter
