@@ -247,3 +247,83 @@ BLESSING = {
     'source': 'https://lospec.com/palette-list/blessing',
     'palette': ('#74569b', '#96fbc7', '#f7ffae', '#ffb3cb', '#d8bfd8')
 }
+
+ISLANDJOY_16 = {
+    'name': 'IslandJoy_16',
+    'source': 'https://lospec.com/palette-list/island-joy-16',
+    'palette': (
+        '#ffffff', '#6df7c1', '#11adc1', '#606c81', '#393457', '#1e8875', 
+        '#5bb361', '#a1e55a', '#f7e476', '#f99252', '#cb4d68', '#6a3771', 
+        '#c92464', '#f48cb6', '#f7b69e', '#9b9c82'
+    )
+}
+
+AMMO_8 = {
+    'name': 'Ammo_8',
+    'source': 'https://lospec.com/palette-list/ammo-8',
+    'palette': (
+        '#040c06', '#112318', '#1e3a29', '#305d42', '#4d8061', '#89a257', 
+        '#bedc7f', '#eeffcc'
+    )
+}
+
+
+GRAY_2BIT = {
+    'name': '2Bit_Grayscale',
+    'source': 'https://lospec.com/palette-list/2-bit-grayscale',
+    'palette': ('#000000', '#676767', '#b6b6b6', '#ffffff')
+}
+
+RESURRECT_32 = {
+    'name': 'Resurrect_32',
+    'source': 'https://lospec.com/palette-list/resurrect-32',
+    'palette': (
+        '#ffffff', '#fb6b1d', '#e83b3b', '#831c5d', '#c32454', '#f04f78', 
+        '#f68181', '#fca790', '#e3c896', '#ab947a', '#966c6c', '#625565', 
+        '#3e3546', '#0b5e65', '#0b8a8f', '#1ebc73', '#91db69', '#fbff86', 
+        '#fbb954', '#cd683d', '#9e4539', '#7a3045', '#6b3e75', '#905ea9', 
+        '#a884f3', '#eaaded', '#8fd3ff', '#4d9be6', '#4d65b4', '#484a77', 
+        '#30e1b9', '#8ff8e2'
+    )
+}
+
+LUX2K = {
+    'name': 'Lux2K',
+    'source': 'https://lospec.com/palette-list/lux2k',
+    'palette': (
+        '#25131a', '#3d253b', '#523b40', '#1f3736', '#2a5a39', '#427f3b', 
+        '#80a53f', '#bbc44e', '#96c641', '#ccf61f', '#8a961f', '#5c6b53', 
+        '#895a45', '#d1851e', '#ffd569', '#bf704d', '#e1a171', '#e6deca', 
+        '#9b4c51', '#802954', '#d01946', '#e84444', '#40369f', '#7144ff', 
+        '#af69bf', '#eaa5ff', '#5880cc', '#62abd4', '#9bf0fd', '#cae6f5', 
+        '#ffffff', '#a7acba', '#606060', '#56587b', '#9a8571', '#dfbbb3'
+    )
+}
+
+MIST_GB = {
+    'name': 'Mist_GB',
+    'source': 'https://lospec.com/palette-list/mist-gb',
+    'palette': ('#2d1b00', '#1e606e', '#5ab9a8', '#c4f0c2')
+}
+
+COMFORT_44 = {
+    'name': 'Comfort_44',
+    'source': 'https://lospec.com/palette-list/comfort44s',
+    'palette': (
+        '#ededed', '#f7e5b2', '#fcc48d', '#e64e4b', '#984071', '#58307b', 
+        '#432776', '#3b265e', '#4f2e6b', '#943ca6', '#df529e', '#f49cae', 
+        '#f7d2bb', '#f4ce9f', '#ecaf83', '#dd8a5b', '#904a5d', '#5d375a', 
+        '#402b55', '#332d58', '#3b337a', '#3d3c93', '#5c55b7', '#a39bd6', 
+        '#c9c7ec', '#c0edef', '#8ed3dc', '#619cc3', '#397cbe', '#365a9b', 
+        '#2c4172', '#2f3f60', '#3f5d92', '#4e7a80', '#60b37e', '#b3daa3', 
+        '#cfe8b7', '#d2d2ba', '#bab59e', '#8b7c99', '#6a5c9d', '#4c428d', 
+        '#3a3487', '#31222c'
+    )
+}
+
+
+TWILIGHT_5 = {
+    'name': 'Twilight_5',
+    'source': 'https://lospec.com/palette-list/twilight-5',
+    'palette': ('#fbbbad', '#ee8695', '#4a7a96', '#333f58', '#292831')
+}

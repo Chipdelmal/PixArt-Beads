@@ -8,12 +8,11 @@ import auxiliary as aux
 
 
 if aux.isNotebook():
-    PNG_NAME = 'sami'
+    (PNG_NAME, downscale) = ('sami', 48)
 else:
-    PNG_NAME = argv[1]
+    (PNG_NAME, downscale) = (argv[1], int(argv[2]))
 fldr = '/home/chipdelmal/Documents/PixelatorBeads'
-(downscale, upscale) = (48, 20)
-(colorsNumber, method) = (25, 1)
+(colorsNumber, method, upscale) = (25, 1, 10)
 saveStages = (True, True, True)
 ###############################################################################
 # Directories and Names
@@ -29,7 +28,8 @@ PALS = (
     col.SLSO, col.MASTEROS, col.SGB_A, col.SGB_B, col.SGB_C, 
     col.SGB_D, col.SUPER_ST, col.MF_SXT, col.ARTKAL_48, col.PEAR_36, 
     col.PIXLTEN, col.ZANT, col.SWEETIE_16, col.BLK_NEO, col.FAMICUBE,
-    col.ONE_BIT, col.BLESSING,
+    col.ONE_BIT, col.BLESSING, col.ISLANDJOY_16, col.AMMO_8, col.GRAY_2BIT,
+    col.RESURRECT_32, col.LUX2K, col.MIST_GB, col.COMFORT_44, col.TWILIGHT_5,
     None
 )
 ###############################################################################
