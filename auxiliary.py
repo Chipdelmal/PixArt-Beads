@@ -6,6 +6,7 @@ import os
 import cv2
 import numpy as np
 from PIL import Image, ImageColor
+import matplotlib.pyplot as plt
 
 PPND = ('A_', 'B_', 'C_', 'D_')
 
@@ -53,10 +54,43 @@ def isNotebook():
     try:
         shell = get_ipython().__class__.__name__
         if shell == 'ZMQInteractiveShell':
-            return True   # Jupyter notebook or qtconsole
+            return True
         elif shell == 'TerminalInteractiveShell':
-            return False  # Terminal running IPython
+            return False
         else:
-            return False  # Other type (?)
+            return False
     except NameError:
-        return False      # Probably standard Python interpreter
+        return False
+
+def plotBeads(
+        fig, ax, img, diameter=1,
+        innerRadius=.2, outerRadius=.975,
+        imgAlpha=.9, bgColor=(1, 1, 1)
+    ):
+    radius = diameter/2
+    (width, height, _) = img.shape
+    # Iterate through pixels 
+    for h in range(int(height)):
+        y = (diameter*h)
+        for w in range(int(width)):
+            x = (diameter*w)
+            coord = (width-x, height-y)
+            # Plot solid disk
+            crl = plt.Circle(
+                coord, radius*outerRadius, 
+                color=tuple([i/255 for i in img[x][y]]), alpha=imgAlpha
+            )
+            ax.add_patch(crl)
+            # Plot empty center
+            crlV = plt.Circle(coord, radius*innerRadius, color=bgColor)
+            ax.add_patch(crlV)
+    # Clean the frame
+    ax.set_xlim(radius, width+radius)
+    ax.set_ylim(radius, height+radius)
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
+    ax.set_facecolor(bgColor)
+    ax.set_aspect(1)
+    ax.axis('off')
+    # Return figure
+    return (fig, ax)

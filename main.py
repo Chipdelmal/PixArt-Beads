@@ -8,7 +8,7 @@ import auxiliary as aux
 
 
 if aux.isNotebook():
-    (PNG_NAME, downscale) = ('sami', 48)
+    (PNG_NAME, downscale) = ('chromFEW', 25)
 else:
     (PNG_NAME, downscale) = (argv[1], int(argv[2]))
 fldr = '/home/chipdelmal/Documents/PixelatorBeads'
