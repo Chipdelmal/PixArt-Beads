@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image, ImageColor
 import matplotlib.pyplot as plt
 
-PPND = ('A_', 'B_', 'C_', 'D_')
+PPND = ('A-', 'B-', 'C-', 'D-')
 
 def paletteReshape(colorPalette):
     # Hex to entries
