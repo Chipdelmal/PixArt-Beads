@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageColor
 
-PPND = ('A_', 'B_', 'C_')
+PPND = ('A_', 'B_', 'C_', 'D_')
 
 def paletteReshape(colorPalette):
     # Hex to entries
@@ -21,7 +21,6 @@ def paletteReshape(colorPalette):
     resim.putpalette(palette)
     # Return
     return (len(pal), resim)
-
 
 def quantizeImage(img, colorsNumber=255, colorPalette=None, method=0, dither=False):
     if colorPalette is None:
@@ -41,7 +40,6 @@ def gridOverlay(img, gridSize, gridColor=(0,0,0)):
         cv2.line(img, (0, x), (width, x), gridColor, 1, 1)
     return img
 
-
 def makeFolder(path):
     if not os.path.exists(path):
         try:
@@ -50,7 +48,6 @@ def makeFolder(path):
             raise OSError(
                     "Can't create destination directory (%s)!" % (path)
                 )
-
 
 def isNotebook():
     try:
