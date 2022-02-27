@@ -12,7 +12,7 @@ if aux.isNotebook():
 else:
     (PNG_NAME, downscale) = (argv[1], int(argv[2]))
 fldr = '/home/chipdelmal/Documents/PixelatorBeads'
-(colorsNumber, method, upscale) = (25, 1, 10)
+(colorsNumber, method, upscale) = (255, 1, 10)
 saveStages = (True, True, True)
 ###############################################################################
 # Directories and Names
@@ -56,9 +56,12 @@ for colDict in PALS:
     ###########################################################################
     # Check Scale
     ###########################################################################
-    if type(downscale) is not tuple:
-        (wo, ho) = img.size
-        downscale = (downscale, int((ho/wo)*downscale))
+    if downscale == 0:
+        downscale = img.size
+    else:
+        if type(downscale) is not tuple:
+            (wo, ho) = img.size
+            downscale = (downscale, int((ho/wo)*downscale))
     ###########################################################################
     # Quantize
     ###########################################################################

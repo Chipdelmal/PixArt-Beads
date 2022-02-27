@@ -11,6 +11,13 @@ pip install Pillow
 pip install opencv-python
 ```
 
+And, ideally, give the bash script executable permissions:
+
+```bash
+chmod +x beadify.sh
+```
+
+
 Then have a look at the following parameters:
 
 * Folder (fld): Working directory for input and output images

@@ -1,16 +1,21 @@
 
+import os
 import cv2
 from os import path
+from sys import argv
 from glob import glob
 from cv2 import imread, cvtColor
 import matplotlib.pyplot as plt
 import auxiliary as aux
-import colors as col
 
-PNG_NAME = 'lynn'
+if aux.isNotebook():
+    PNG_NAME = 'lynnSword'
+else:
+    PNG_NAME = argv[1]
+os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH")
 fldr = '/home/chipdelmal/Documents/PixelatorBeads'
 (outRadius, inRadius) = (.975 , .2)
-(bgColor, imgAlpha) = ((1, 1, 1), .9)
+(bgColor, imgAlpha) = ((.9, .9, .9), .9)
 ###############################################################################
 # Needed to run the dev phase
 ###############################################################################
@@ -22,7 +27,7 @@ inImages = glob(path.join(pthOut, '{}*-{}'.format(aux.PPND[0], nme)))
 ###############################################################################
 imPth = inImages[0]
 for imPth in inImages:
-    (prep, palName, name) = os.path.basename(imPth).split('-')
+    (prep, palName, name) = path.basename(imPth).split('-')
     (nmeUnscaled, nmeBeads) = (
         '{}{}-{}'.format(aux.PPND[0], palName, nme[:-4]),
         '{}{}-{}'.format(aux.PPND[3], palName, nme[:-4])
