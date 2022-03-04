@@ -1,6 +1,11 @@
 # PixelatorBeads
 
 
+<img src="./media/sami.png" height="225px" align="middle">
+<img src="./media/B-SGB_M1A-sami.png" height="225px" align="middle">
+<img src="./media/C-SGB_M1A-sami.png" height="225px" align="middle">
+<img src="./media/D-SGB_M1A-sami.png" height="225px" align="middle">
+
 ## Instructions
 
 To use the script first install the required dependencies:
@@ -27,6 +32,8 @@ Then have a look at the following parameters:
 * Colors Number (colorsNumber): Number of colors to be used in the quantization process (overridden if the color palette is provided)
 * Color Palette (colorPalette): List of HEX values to be used in the quantization of the image. Set color palette to "None" to use the colorsNumber parameter instead.
 * Method (int): [0: median cut, 1: maximum coverage, 2: fast octree]
+
+
 
 ##  Author
 
