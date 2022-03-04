@@ -1,7 +1,7 @@
 # PixelatorBeads
 
 
-<img src="./media/sami.png" height="225px" align="middle"><img src="./media/B-SGB_M1A-sami.png" height="225px" align="middle"><img src="./media/C-SGB_M1A-sami.png" height="225px" align="middle"><img src="./media/D-SGB_M1A-sami.png" height="225px" align="middle">
+<img src="./media/sami.png" height="200px"><img src="./media/B-SGB_M1A-sami.png" height="200px" ><img src="./media/C-SGB_M1A-sami.png" height="200px"><img src="./media/D-SGB_M1A-sami.png" height="200px">
 
 ## Instructions
 
