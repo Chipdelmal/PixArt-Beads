@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 
 PPND = ('A-', 'B-', 'C-', 'D-')
 
+
 def paletteReshape(colorPalette):
     # Hex to entries
     rgbTuples = [ImageColor.getrgb(i) for i in colorPalette]
@@ -33,6 +34,7 @@ def quantizeImage(img, colorsNumber=255, colorPalette=None, method=0, dither=Fal
         )
     return img
 
+
 def gridOverlay(img, gridSize, gridColor=(0,0,0)):
     img = np.asarray(img)
     (height, width, channels) = img.shape
@@ -41,6 +43,7 @@ def gridOverlay(img, gridSize, gridColor=(0,0,0)):
     for x in range(0, height-1, gridSize):
         cv2.line(img, (0, x), (width, x), gridColor, 1, 1)
     return img
+
 
 def makeFolder(path):
     if not os.path.exists(path):
@@ -62,6 +65,7 @@ def isNotebook():
             return False
     except NameError:
         return False
+
 
 def plotBeads(
         fig, ax, img, diameter=1,
