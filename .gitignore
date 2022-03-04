@@ -1,5 +1,5 @@
 # Media
-*.png
+# *.png
 *.gif
 
 # Byte-compiled / optimized / DLL files
