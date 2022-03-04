@@ -2,6 +2,7 @@
 #   Functions Definitions
 ###############################################################################
 
+import re
 import os
 import cv2
 import numpy as np
@@ -94,3 +95,12 @@ def plotBeads(
     ax.axis('off')
     # Return figure
     return (fig, ax)
+
+
+def readPaletteFile(filePath, hexPtrn=r'^#(?:[0-9a-fA-F]{3}){1,2}$'):
+    with open(filePath) as f:
+        lines = f.read().splitlines() 
+    (name, source, colors) = (lines[0], lines[1], lines[2:])
+    colors = [c for c in colors if re.search(hexPtrn, c)]
+    colorPalette = {'name': name, 'source': source, 'palette': colors}
+    return colorPalette

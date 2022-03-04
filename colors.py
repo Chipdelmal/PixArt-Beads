@@ -300,6 +300,7 @@ LUX2K = {
     )
 }
 
+
 MIST_GB = {
     'name': 'Mist_GB',
     'source': 'https://lospec.com/palette-list/mist-gb',
