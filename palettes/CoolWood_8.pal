@@ -1,0 +1,10 @@
+CoolWood_8
+https://lospec.com/palette-list/coldwood8
+#372e4d
+#5f699c
+#65aed6
+#a4ebcc
+#effae6
+#f0b38d
+#b56d7f
+#614363
