@@ -21,7 +21,7 @@ for palette in palettes:
 
 for palette in palettes:
     pal = aux.readPaletteFile(palette)
-    print("<tr><td>{}</td><td><img src='./{}.png'></td><td><a href={}>{}</a></td></tr>".format(pal['name'], pal['name'], pal['source'], pal['source']))
+    print("<tr><td>{}</td><td><img src='./palettes/{}.png'></td><td><a href={}>{}</a></td></tr>".format(pal['name'], pal['name'], pal['source'], pal['source']))
 ###############################################################################
 # Color Replace
 ###############################################################################
