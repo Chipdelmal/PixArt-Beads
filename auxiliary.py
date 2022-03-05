@@ -108,3 +108,14 @@ def readPaletteFile(filePath, hexPtrn=r'^#(?:[0-9a-fA-F]{3}){1,2}$'):
     colors = [c for c in colors if re.search(hexPtrn, c)]
     colorPalette = {'name': name, 'source': source, 'palette': colors}
     return colorPalette
+
+
+def replaceBackground(img, bkgColor, replacementColor='#ffffff'):
+    # Convert HEX to RGB
+    orig_color = ImageColor.getcolor(bkgColor, "RGB")
+    replacement_color = ImageColor.getcolor(replacementColor, "RGB")
+    # Replace color
+    data = np.array(img)
+    data[(data==orig_color).all(axis=-1)] = replacement_color
+    img2 = Image.fromarray(data, mode='RGB')
+    return img2

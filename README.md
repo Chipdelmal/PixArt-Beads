@@ -1,15 +1,25 @@
 # PixArt Beads
 
+This repo contains some python scripts that should be useful in transforming images into pixel-beads images and handcrafts!
 
 <img src="./media/sami.png" height="200px"><img src="./media/B-SGB_M1A-sami.png" height="200px" ><img src="./media/C-SGB_M1A-sami.png" height="200px"><img src="./media/D-SGB_M1A-sami.png" height="200px">
 
+Some of the features are:
+
+* Color quantization: with the option to use number of colors, provided or user-defined color palettes.
+* Image downscale: 
+* Image upscale:
+* Color replace:
+* Color mapping: 
+
 ## Instructions
 
-To use the script first install the required dependencies:
+To use the scripts first install the required dependencies either through the REQUIREMENTS files (txt&yml), or manually:
 
 ```bash
 pip install numpy
 pip install Pillow
+pip install matplotlib
 pip install opencv-python
 ```
 
