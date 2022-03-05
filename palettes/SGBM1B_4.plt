@@ -1,4 +1,4 @@
-SGB1B_4
+SGBM1B_4
 https://lospec.com/palette-list/super-game-boy-menu-1-palette-b
 #dfd8c0
 #cfb070

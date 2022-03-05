@@ -8,6 +8,8 @@ import cv2
 import numpy as np
 from PIL import Image, ImageColor
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatch
 
 PPND = ('A-', 'B-', 'C-', 'D-')
 
@@ -133,7 +135,6 @@ def getImagePalette(img):
 
 
 def genColorSwatch(palette, width, height):
-    palette = palette['palette']
     colors = [ImageColor.getcolor(i, "RGB") for i in palette]
     clstNumber = len(colors)
     pltAppend = np.zeros((height, width, 3))
@@ -141,7 +142,48 @@ def genColorSwatch(palette, width, height):
     for row in range(hBlk):
         colorIter = -1
         for col in range(width):
-            if (col % wBlk == 0) and (colorIter<clstNumber-1):
+            if (col%wBlk == 0) and (colorIter < clstNumber-1):
                 colorIter = colorIter + 1
             pltAppend[row][col] = colors[colorIter]
     return Image.fromarray(pltAppend.astype('uint8'), 'RGB')
+
+
+def getLuma(r, g, b):
+    luma = 0.299*r + 0.587*g + 0.114*b
+    return luma
+
+
+def genColorCounts(
+        imgPalette, width, height, 
+        fontdict = {'family':'monospace', 'weight':'bold', 'size':22},
+        xlim = (0, .5)
+    ):
+    pal = imgPalette
+    # Create canvas
+    fig = plt.gcf()
+    DPI = fig.get_dpi()
+    ax = fig.add_axes([0, 0, 1, 1])
+    fig.set_size_inches(width/float(DPI), height/float(DPI))
+    # Setting up groups
+    n_groups = 1
+    n_rows = len(pal)//n_groups+1
+    # Generate swatch with count
+    for j in range(len(pal)):
+        (wr, hr) = (.25, 1)
+        (color, count) = pal[j]
+        rgb = [i/255 for i in ImageColor.getcolor(color, "RGB")]
+        # Color rows
+        col_shift = (j//n_rows)*3
+        y_pos = (j%(n_rows))*hr
+        # Print rectangle and text
+        ax.add_patch(mpatch.Rectangle((0+col_shift, y_pos), wr, hr, color=rgb, ec='k'))
+        ax.text(
+            wr*1.1+col_shift, y_pos+hr/2, f'{color} ({count:04})', 
+            color='k', va='center', ha='left', fontdict=fontdict
+        )
+    # Clean up the axes
+    ax.set_xlim(xlim[0], xlim[1]*n_groups)
+    ax.set_ylim((n_rows), -1)
+    ax.axis('off')
+    # Return figure
+    return (fig, ax)
