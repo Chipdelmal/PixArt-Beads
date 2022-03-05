@@ -1,0 +1,10 @@
+SLSO_8
+https://lospec.com/palette-list/slso8
+#0d2b45
+#203c56
+#544e68
+#8d697a
+#d08159
+#ffaa5e
+#ffd4a3
+#ffecd6

@@ -1,6 +1,6 @@
 # Color Palette Files
 
-The color palette files are nothing else than text files saved with a **.pal** extension. This *ad hoc* format follows this structure:
+The color palette files are nothing else than text files saved with a **.plt** extension. This *ad hoc* format follows this structure:
 
 ```bash
 PALETTE_NAME

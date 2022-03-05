@@ -8,7 +8,7 @@ from PIL import Image, ImageColor
 imgName = "aaPalette"
 PTH = "/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/BlueMoon/"
 filename = path.join(PTH, imgName+'.png')
-palettes = glob(path.join(PTH, '*.pal'))
+palettes = glob(path.join(PTH, '*.plt'))
 
 ###############################################################################
 # Palette Load
