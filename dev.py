@@ -15,14 +15,12 @@ palettes = glob(path.join(PTH, '*.pal'))
 ###############################################################################
 palette = palettes[1]
 aux.readPaletteFile(palette)
-
 ###############################################################################
 # Color Replace
 ###############################################################################
-bkgColor = '#ff7fff'
-orig_color = ImageColor.getcolor(bkgColor, "RGB")
-replacement_color = (255, 255, 255)
-
 img = Image.open(filename).convert('RGB')
-aux.replaceBackground(img, bkgColor, replacementColor='#ffffff')
-
+imgP = aux.replaceBackground(img, '#ff7fff', replacementColor='#ffffff')
+###############################################################################
+# Color Palette
+###############################################################################
+aux.getImagePalette(imgP)

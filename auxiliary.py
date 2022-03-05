@@ -119,3 +119,15 @@ def replaceBackground(img, bkgColor, replacementColor='#ffffff'):
     data[(data==orig_color).all(axis=-1)] = replacement_color
     img2 = Image.fromarray(data, mode='RGB')
     return img2
+
+
+def rgbToHex(r, g, b):
+    return '#{:02x}{:02x}{:02x}'.format(r, g, b)
+
+
+def getImagePalette(img):
+    palette = sorted(img.getcolors(), reverse=True)
+    hexPalette = [(rgbToHex(*i[1]), i[0]) for i in palette]
+    return hexPalette
+
+

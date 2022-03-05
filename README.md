@@ -11,10 +11,12 @@ Some of the features are:
 * Image upscale:
 * Color replace:
 * Color mapping: 
+* Color palette:
+* Color counts:
 
 ## Instructions
 
-To use the scripts first install the required dependencies either through the REQUIREMENTS files (txt&yml), or manually:
+To use the scripts first install the required dependencies either through the REQUIREMENTS files (txt/yml), or manually:
 
 ```bash
 pip install numpy
