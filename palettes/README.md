@@ -19,7 +19,7 @@ Where the two first rows will always be interpreted as palette name and palette 
 
 ## Available Palettes
 
- <table>
+<table>
     <tr><th>Code</th><th>Palette</th><th>Source</th></tr>
     <!--Table Begins-->
     <tr><td>Ammo_8</td><td><img src='./Ammo_8.png'></td><td><a href=https://lospec.com/palette-list/ammo-8>https://lospec.com/palette-list/ammo-8</a></td></tr>
@@ -31,7 +31,6 @@ Where the two first rows will always be interpreted as palette name and palette 
     <tr><td>Famicube_64</td><td><img src='./Famicube_64.png'></td><td><a href=https://lospec.com/palette-list/famicube>https://lospec.com/palette-list/famicube</a></td></tr>
     <tr><td>GB_5</td><td><img src='./GB_5.png'></td><td><a href=https://www.designpieces.com/palette/game-boy-original-color-palette-hex-and-rgb/>https://www.designpieces.com/palette/game-boy-original-color-palette-hex-and-rgb/</a></td></tr>
     <tr><td>Gray2Bit_4</td><td><img src='./Gray2Bit_4.png'></td><td><a href=https://lospec.com/palette-list/2-bit-grayscale>https://lospec.com/palette-list/2-bit-grayscale</a></td></tr>
-    <tr><td>2Bit_Grayscale</td><td><img src='./2Bit_Grayscale.png'></td><td><a href=https://lospec.com/palette-list/2-bit-grayscale>https://lospec.com/palette-list/2-bit-grayscale</a></td></tr>
     <tr><td>IslandJoy_16</td><td><img src='./IslandJoy_16.png'></td><td><a href=https://lospec.com/palette-list/island-joy-16>https://lospec.com/palette-list/island-joy-16</a></td></tr>
     <tr><td>LeMasteros_89</td><td><img src='./LeMasteros_89.png'></td><td><a href=https://lospec.com/palette-list/le-masteros-paletas>https://lospec.com/palette-list/le-masteros-paletas</a></td></tr>
     <tr><td>Lux2k_36</td><td><img src='./Lux2k_36.png'></td><td><a href=https://lospec.com/palette-list/lux2k>https://lospec.com/palette-list/lux2k</a></td></tr>
@@ -44,7 +43,7 @@ Where the two first rows will always be interpreted as palette name and palette 
     <tr><td>Pilxten_41</td><td><img src='./Pilxten_41.png'></td><td><a href=https://lospec.com/palette-list/pixlten>https://lospec.com/palette-list/pixlten</a></td></tr>
     <tr><td>Resurrect_32</td><td><img src='./Resurrect_32.png'></td><td><a href=https://lospec.com/palette-list/resurrect-32>https://lospec.com/palette-list/resurrect-32</a></td></tr>
     <tr><td>SGBM1A_4</td><td><img src='./SGBM1A_4.png'></td><td><a href=https://lospec.com/palette-list/super-game-boy-menu-1-palette-a>https://lospec.com/palette-list/super-game-boy-menu-1-palette-a</a></td></tr>
-    <tr><td>SGB1B_4</td><td><img src='./SGB1B_4.png'></td><td><a href=https://lospec.com/palette-list/super-game-boy-menu-1-palette-b>https://lospec.com/palette-list/super-game-boy-menu-1-palette-b</a></td></tr>
+    <tr><td>SGB1B_4</td><td><img src='./SGBM1B_4.png'></td><td><a href=https://lospec.com/palette-list/super-game-boy-menu-1-palette-b>https://lospec.com/palette-list/super-game-boy-menu-1-palette-b</a></td></tr>
     <tr><td>SGBM1C_4</td><td><img src='./SGBM1C_4.png'></td><td><a href=https://lospec.com/palette-list/super-game-boy-menu-1-palette-c>https://lospec.com/palette-list/super-game-boy-menu-1-palette-c</a></td></tr>
     <tr><td>SGMB1D_4</td><td><img src='./SGMB1D_4.png'></td><td><a href=https://lospec.com/palette-list/super-game-boy-menu-1-palette-d>https://lospec.com/palette-list/super-game-boy-menu-1-palette-d</a></td></tr>
     <tr><td>SLSO_8</td><td><img src='./SLSO_8.png'></td><td><a href=https://lospec.com/palette-list/slso8>https://lospec.com/palette-list/slso8</a></td></tr>
