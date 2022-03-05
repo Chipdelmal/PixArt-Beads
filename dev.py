@@ -6,15 +6,22 @@ import auxiliary as aux
 from PIL import Image, ImageColor
 
 imgName = "aaPalette"
-PTH = "/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/BlueMoon/"
+PTH = "/home/chipdelmal/Documents/GitHub/PixelatorBeads/palettes/"
 filename = path.join(PTH, imgName+'.png')
-palettes = glob(path.join(PTH, '*.plt'))
+palettes = sorted(glob(path.join(PTH, '*.plt')))
 
 ###############################################################################
 # Palette Load
 ###############################################################################
-palette = palettes[1]
-aux.readPaletteFile(palette)
+palette = palettes[0]
+for palette in palettes:
+    pal = aux.readPaletteFile(palette)
+    img = aux.genColorSwatch(pal, 500, 20)
+    img.save(path.join(PTH, pal['name']+'.png'))
+
+for palette in palettes:
+    pal = aux.readPaletteFile(palette)
+    print("<tr><td>{}</td><td><img src='./{}.png'></td><td><a href={}>{}</a></td></tr>".format(pal['name'], pal['name'], pal['source'], pal['source']))
 ###############################################################################
 # Color Replace
 ###############################################################################

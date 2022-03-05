@@ -131,3 +131,17 @@ def getImagePalette(img):
     return hexPalette
 
 
+
+def genColorSwatch(palette, width, height):
+    palette = palette['palette']
+    colors = [ImageColor.getcolor(i, "RGB") for i in palette]
+    clstNumber = len(colors)
+    pltAppend = np.zeros((height, width, 3))
+    (wBlk, hBlk) = (round(width/clstNumber), round(height))
+    for row in range(hBlk):
+        colorIter = -1
+        for col in range(width):
+            if (col % wBlk == 0) and (colorIter<clstNumber-1):
+                colorIter = colorIter + 1
+            pltAppend[row][col] = colors[colorIter]
+    return Image.fromarray(pltAppend.astype('uint8'), 'RGB')
