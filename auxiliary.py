@@ -7,12 +7,13 @@ import os
 import cv2
 import numpy as np
 from PIL import Image, ImageColor
+from cv2 import imread, cvtColor
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatch
 
 PPND = ('A-', 'B-', 'C-', 'D-')
-
+FIDS = ('QNT', 'DWN', 'UPS', 'GRD', 'SWT', 'BDS')
 
 def paletteReshape(colorPalette):
     # Hex to entries
@@ -103,6 +104,22 @@ def plotBeads(
     return (fig, ax)
 
 
+def genBeadsPlot(
+        imgCV, outRadius=0.975, inRadius=0.2, 
+        imgAlpha=.9, bgColor='#ffffff'
+    ):
+    bkgCol = [i/255 for i in ImageColor.getcolor(bgColor, "RGB")]
+    imgCV = cvtColor(imgCV, cv2.COLOR_BGR2RGB)
+    imgCV = cv2.rotate(imgCV, cv2.cv2.ROTATE_90_COUNTERCLOCKWISE)
+    (fig, ax) = plt.subplots(1, 1, figsize=(15, 15))
+    (fig, ax) = plotBeads(
+        fig, ax, imgCV, 
+        innerRadius=inRadius, outerRadius=outRadius,
+        imgAlpha=imgAlpha, bgColor=bkgCol
+    )
+    return (fig, ax)
+
+
 def readPaletteFile(filePath, hexPtrn=r'^#(?:[0-9a-fA-F]{3}){1,2}$'):
     with open(filePath) as f:
         lines = f.read().splitlines() 
@@ -110,6 +127,14 @@ def readPaletteFile(filePath, hexPtrn=r'^#(?:[0-9a-fA-F]{3}){1,2}$'):
     colors = [c for c in colors if re.search(hexPtrn, c)]
     colorPalette = {'name': name, 'source': source, 'palette': colors}
     return colorPalette
+
+
+def readCMapperFile(filePath):
+    with open(filePath) as f:
+        lines = f.read().splitlines()
+    cMapper = [[i.strip() for i in l.split(',')] for l in lines]
+    cMapper = [i for i in cMapper if len(i) > 1]
+    return cMapper
 
 
 def replaceBackground(img, bkgColor, replacementColor='#ffffff'):
@@ -121,6 +146,12 @@ def replaceBackground(img, bkgColor, replacementColor='#ffffff'):
     data[(data==orig_color).all(axis=-1)] = replacement_color
     img2 = Image.fromarray(data, mode='RGB')
     return img2
+
+
+def mapColors(img, cMapper=(('#ff7fff', '#ffffff'))):
+    for i in cMapper:
+        img = replaceBackground(img, i[0], replacementColor=i[1])
+    return img
 
 
 def rgbToHex(r, g, b):
@@ -197,3 +228,13 @@ def downscaleSize(img, downscale):
             (wo, ho) = img.size
             downscale = (downscale, int((ho/wo)*downscale))
     return downscale
+
+
+def makeFolder(path):
+    if not os.path.exists(path):
+        try:
+            os.mkdir(path)
+        except OSError:
+            raise OSError(
+                    "Can't create destination directory (%s)!" % (path)
+                )

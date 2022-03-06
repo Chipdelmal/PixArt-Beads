@@ -11,7 +11,7 @@ import matplotlib.patches as mpatch
 rcParams['font.family'] = ''
 
 
-imgName = "aaPalette"
+imgName = "rocketsPalette"
 PTH = "/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/BlueMoon/"
 filename = path.join(PTH, imgName+'.png')
 palettes = sorted(glob(path.join(PTH, '*.plt')))
@@ -40,7 +40,8 @@ imgPalette
 (wpx, hpx) = (250, 2300)
 aux.genColorCounts(imgPalette, wpx, hpx)
 # fig.savefig("test.png")
-
-    
-
-
+###############################################################################
+# Color Mapping
+###############################################################################
+cMapper = aux.readCMapperFile(path.join(PTH, 'CMapper.map'))
+aux.mapColors(img, cMapper)
