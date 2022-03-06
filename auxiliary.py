@@ -187,3 +187,13 @@ def genColorCounts(
     ax.axis('off')
     # Return figure
     return (fig, ax)
+
+
+def downscaleSize(img, downscale):
+    if downscale == 0:
+        downscale = img.size
+    else:
+        if type(downscale) is not tuple:
+            (wo, ho) = img.size
+            downscale = (downscale, int((ho/wo)*downscale))
+    return downscale

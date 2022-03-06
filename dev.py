@@ -21,22 +21,25 @@ palettes = sorted(glob(path.join(PTH, '*.plt')))
 ###############################################################################
 palette = palettes[1]
 pal = aux.readPaletteFile(palette)
-aux.genColorSwatch(pal['palette'], 500, 20)
+swatch = aux.genColorSwatch(pal['palette'], 500, 20)
+swatch
 ###############################################################################
 # Color Replace
 ###############################################################################
 img = Image.open(filename).convert('RGB')
 imgP = aux.replaceBackground(img, '#ff7fff', replacementColor='#ffffff')
+imgP
 ###############################################################################
 # Color Palette
 ###############################################################################
 imgPalette = aux.getImagePalette(imgP)
+imgPalette
 ###############################################################################
 # Color Palette
 ###############################################################################
 (wpx, hpx) = (250, 2300)
 aux.genColorCounts(imgPalette, wpx, hpx)
-fig.savefig("test.png")
+# fig.savefig("test.png")
 
     
 
