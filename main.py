@@ -115,7 +115,6 @@ ccat.save(pthFNL)
 # Delete files
 ###############################################################################
 banList = (pthDWN, pthUPS, pthGRD, pthSWT, pthBDS, pthFNL)
-if DEBUG:
+if not DEBUG:
     for tFile in banList[:-1]:
-        # print(tFile)
         remove(tFile)
