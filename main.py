@@ -1,13 +1,11 @@
 
 import os
-from os.path import exists
-from glob import glob
 from sys import argv
-from PIL import Image, ImageColor
+from os.path import exists
 from os import path, remove
-from cv2 import imread, imwrite, cvtColor
+from cv2 import imread, imwrite
 import matplotlib.pyplot as plt
-import colors as col
+from PIL import Image, ImageColor
 import auxiliary as aux
 
 if aux.isNotebook():
@@ -16,10 +14,12 @@ if aux.isNotebook():
         'sami.png', 'Sweetie_16.plt'
     )
     (DOWNSCALE, UPSCALE) = (48, 10)
+    DEBUG = True
 else:
     os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH")
     (BASE_PATH, PNG_NAME, PAL_NAME) = (argv[1], argv[2], argv[3])
     (DOWNSCALE, UPSCALE) = (int(argv[4]), int(argv[5]))
+    DEBUG = int(argv[6])
 # Internal constants ----------------------------------------------------------
 (QNT_MTHD, DWN_MTHD) = (aux.MTHDS[0], aux.MTHDS[1])
 ###############################################################################
@@ -111,4 +111,11 @@ plt.close('all')
 )
 ccat = aux.hConcat(imgBDS, imgSWT)
 ccat.save(pthFNL)
-
+###############################################################################
+# Delete files
+###############################################################################
+banList = (pthDWN, pthUPS, pthGRD, pthSWT, pthBDS, pthFNL)
+if DEBUG:
+    for tFile in banList[:-1]:
+        # print(tFile)
+        remove(tFile)

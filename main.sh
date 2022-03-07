@@ -4,6 +4,7 @@ NME='sami.png'
 PTH="/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/Portraits"
 DWN="0"
 UPS="10"
+DBG="1"
 
 ###############################################################################
 # Get color palettes in folder
@@ -16,5 +17,5 @@ FILES=($(find $PTH -name '*.plt'))
 for val in ${FILES[@]}; do
     PAL=$(basename ${val})
     echo "* Processing ${PAL}"
-    python main.py $PTH $NME $PAL $DWN $UPS
+    python main.py $PTH $NME $PAL $DWN $UPS $DBG
 done
