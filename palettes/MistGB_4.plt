@@ -1,4 +1,4 @@
-Mist_GB
+MistGB_4
 https://lospec.com/palette-list/mist-gb
 #2d1b00
 #1e606e

@@ -25,7 +25,7 @@ Where the two first rows will always be interpreted as palette name and palette 
     <tr><td>Ammo_8</td><td><img src='./Ammo_8.png'></td><td><a href=https://lospec.com/palette-list/ammo-8>https://lospec.com/palette-list/ammo-8</a></td></tr>
     <tr><td>Blessing_5</td><td><img src='./Blessing_5.png'></td><td><a href=https://lospec.com/palette-list/blessing>https://lospec.com/palette-list/blessing</a></td></tr>
     <tr><td>BlkNeo_46</td><td><img src='./BlkNeo_46.png'></td><td><a href=https://lospec.com/palette-list/blk-neo>https://lospec.com/palette-list/blk-neo</a></td></tr>
-    <tr><td>Comfort44S_44</td><td><img src='./Comfort44S_44.png'></td><td><a href=https://lospec.com/palette-list/comfort44s>https://lospec.com/palette-list/comfort44s</a></td></tr>
+    <tr><td>Comfort_44</td><td><img src='./Comfort44S_44.png'></td><td><a href=https://lospec.com/palette-list/comfort44s>https://lospec.com/palette-list/comfort44s</a></td></tr>
     <tr><td>CoolWood_8</td><td><img src='./CoolWood_8.png'></td><td><a href=https://lospec.com/palette-list/coldwood8>https://lospec.com/palette-list/coldwood8</a></td></tr>
     <tr><td>Endesaga_32</td><td><img src='./Endesaga_32.png'></td><td><a href=https://lospec.com/palette-list/endesga-32>https://lospec.com/palette-list/endesga-32</a></td></tr>
     <tr><td>Famicube_64</td><td><img src='./Famicube_64.png'></td><td><a href=https://lospec.com/palette-list/famicube>https://lospec.com/palette-list/famicube</a></td></tr>
@@ -35,8 +35,8 @@ Where the two first rows will always be interpreted as palette name and palette 
     <tr><td>LeMasteros_89</td><td><img src='./LeMasteros_89.png'></td><td><a href=https://lospec.com/palette-list/le-masteros-paletas>https://lospec.com/palette-list/le-masteros-paletas</a></td></tr>
     <tr><td>Lux2k_36</td><td><img src='./Lux2k_36.png'></td><td><a href=https://lospec.com/palette-list/lux2k>https://lospec.com/palette-list/lux2k</a></td></tr>
     <tr><td>MG_16</td><td><img src='./MF_16.png'></td><td><a href=https://lospec.com/palette-list/mf-16>https://lospec.com/palette-list/mf-16</a></td></tr>
-    <tr><td>Mist_GB</td><td><img src='./Mist_GB.png'></td><td><a href=https://lospec.com/palette-list/mist-gb>https://lospec.com/palette-list/mist-gb</a></td></tr>
-    <tr><td>NES</td><td><img src='./NES.png'></td><td><a href=https://lospec.com/palette-list/nintendo-entertainment-system>https://lospec.com/palette-list/nintendo-entertainment-system</a></td></tr>
+    <tr><td>MistGB_4</td><td><img src='./Mist_GB.png'></td><td><a href=https://lospec.com/palette-list/mist-gb>https://lospec.com/palette-list/mist-gb</a></td></tr>
+    <tr><td>NES_55</td><td><img src='./NES.png'></td><td><a href=https://lospec.com/palette-list/nintendo-entertainment-system>https://lospec.com/palette-list/nintendo-entertainment-system</a></td></tr>
     <tr><td>Nostalgia_36</td><td><img src='./Nostalgia_36.png'></td><td><a href=https://lospec.com/palette-list/nostalgia36>https://lospec.com/palette-list/nostalgia36</a></td></tr>
     <tr><td>OneBitGlow_2</td><td><img src='./OneBitGlow_2.png'></td><td><a href=https://lospec.com/palette-list/1bit-monitor-glow>https://lospec.com/palette-list/1bit-monitor-glow</a></td></tr>
     <tr><td>Pear_36</td><td><img src='./Pear_36.png'></td><td><a href=https://lospec.com/palette-list/pear36>https://lospec.com/palette-list/pear36</a></td></tr>

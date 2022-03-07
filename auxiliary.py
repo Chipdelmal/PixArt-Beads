@@ -189,7 +189,7 @@ def getLuma(r, g, b):
 
 def genColorCounts(
         imgPalette, width, height, 
-        fontdict = {'family':'monospace', 'weight':'bold', 'size':50},
+        fontdict = {'family':'monospace', 'weight':'normal', 'size':50},
         xlim = (0, 1.25)
     ):
     pal = imgPalette
@@ -213,7 +213,7 @@ def genColorCounts(
         hshift = .05
         ax.add_patch(mpatch.Rectangle((hshift+col_shift, y_pos), wr, hr, color=rgb, ec='k', lw=4))
         ax.text(
-            hshift+wr*1.1+col_shift, y_pos+hr/2, f'{color} ({count:04})', 
+            hshift+wr*1.1+col_shift, y_pos+hr/2, f'{color} ({count:05}) ', 
             color='k', va='center', ha='left', fontdict=fontdict
         )
     # Clean up the axes

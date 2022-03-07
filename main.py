@@ -9,7 +9,6 @@ from cv2 import imread, imwrite, cvtColor
 import matplotlib.pyplot as plt
 import colors as col
 import auxiliary as aux
-os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH")
 
 if aux.isNotebook():
     (BASE_PATH, PNG_NAME, PAL_NAME) = (
@@ -18,6 +17,7 @@ if aux.isNotebook():
     )
     (DOWNSCALE, UPSCALE) = (48, 10)
 else:
+    os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH")
     (BASE_PATH, PNG_NAME, PAL_NAME) = (argv[1], argv[2], argv[3])
     (DOWNSCALE, UPSCALE) = (int(argv[4]), int(argv[5]))
 # Internal constants ----------------------------------------------------------
@@ -25,11 +25,11 @@ else:
 ###############################################################################
 # Folders and Filenames
 ###############################################################################
-fID = PNG_NAME.split('.')[0]
+(fID, palID) = (PNG_NAME.split('.')[0], PAL_NAME.split('.')[0])
 outFolder = path.join(BASE_PATH, fID)
 aux.makeFolder(outFolder)
 (pthQNT, pthDWN, pthUPS, pthGRD, pthSWT, pthBDS, pthFNL) = [
-    path.join(outFolder, i+f'_{fID}.png') for i in aux.FIDS
+    path.join(outFolder, i+f'-{palID}-{fID}.png') for i in aux.FIDS
 ]
 ###############################################################################
 # Load Image

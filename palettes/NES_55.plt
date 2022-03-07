@@ -1,4 +1,4 @@
-NES
+NES_55
 https://lospec.com/palette-list/nintendo-entertainment-system
 #000000
 #fcfcfc

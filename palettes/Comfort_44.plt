@@ -1,4 +1,4 @@
-Comfort44S_44
+Comfort_44
 https://lospec.com/palette-list/comfort44s
 #ededed
 #f7e5b2
