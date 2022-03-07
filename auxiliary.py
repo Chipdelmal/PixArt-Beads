@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatch
 
 PPND = ('A-', 'B-', 'C-', 'D-')
-FIDS = ('QNT', 'DWN', 'UPS', 'GRD', 'SWT', 'BDS')
+FIDS = ('QNT', 'DWN', 'UPS', 'GRD', 'SWT', 'BDS', 'FNL')
 
 def paletteReshape(colorPalette):
     # Hex to entries
@@ -105,7 +105,7 @@ def plotBeads(
 
 
 def genBeadsPlot(
-        imgCV, outRadius=0.975, inRadius=0.2, 
+        imgCV, diameter=1, outRadius=0.975, inRadius=0.2, 
         imgAlpha=.9, bgColor='#ffffff'
     ):
     bkgCol = [i/255 for i in ImageColor.getcolor(bgColor, "RGB")]
@@ -113,7 +113,7 @@ def genBeadsPlot(
     imgCV = cv2.rotate(imgCV, cv2.cv2.ROTATE_90_COUNTERCLOCKWISE)
     (fig, ax) = plt.subplots(1, 1, figsize=(15, 15))
     (fig, ax) = plotBeads(
-        fig, ax, imgCV, 
+        fig, ax, imgCV, diameter=diameter,
         innerRadius=inRadius, outerRadius=outRadius,
         imgAlpha=imgAlpha, bgColor=bkgCol
     )
@@ -186,8 +186,8 @@ def getLuma(r, g, b):
 
 def genColorCounts(
         imgPalette, width, height, 
-        fontdict = {'family':'monospace', 'weight':'bold', 'size':22},
-        xlim = (0, .5)
+        fontdict = {'family':'monospace', 'weight':'bold', 'size':50},
+        xlim = (0, .8)
     ):
     pal = imgPalette
     # Create canvas
@@ -207,9 +207,10 @@ def genColorCounts(
         col_shift = (j//n_rows)*3
         y_pos = (j%(n_rows))*hr
         # Print rectangle and text
-        ax.add_patch(mpatch.Rectangle((0+col_shift, y_pos), wr, hr, color=rgb, ec='k'))
+        hshift = .05
+        ax.add_patch(mpatch.Rectangle((hshift+col_shift, y_pos), wr, hr, color=rgb, ec='k'))
         ax.text(
-            wr*1.1+col_shift, y_pos+hr/2, f'{color} ({count:04})', 
+            hshift+wr*1.1+col_shift, y_pos+hr/2, f'{color} ({count:04})', 
             color='k', va='center', ha='left', fontdict=fontdict
         )
     # Clean up the axes
@@ -238,3 +239,17 @@ def makeFolder(path):
             raise OSError(
                     "Can't create destination directory (%s)!" % (path)
                 )
+
+
+def hConcat(im1, im2):
+    dst = Image.new('RGB', (im1.width + im2.width, im1.height))
+    dst.paste(im1, (0, 0))
+    dst.paste(im2, (im1.width, 0))
+    return dst
+
+
+def vConcat(im1, im2):
+    dst = Image.new('RGB', (im1.width, im1.height + im2.height))
+    dst.paste(im1, (0, 0))
+    dst.paste(im2, (0, im1.height))
+    return dst
