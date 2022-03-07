@@ -34,7 +34,7 @@ Where the two first rows will always be interpreted as palette name and palette 
     <tr><td>IslandJoy_16</td><td><img src='./IslandJoy_16.png'></td><td><a href=https://lospec.com/palette-list/island-joy-16>https://lospec.com/palette-list/island-joy-16</a></td></tr>
     <tr><td>LeMasteros_89</td><td><img src='./LeMasteros_89.png'></td><td><a href=https://lospec.com/palette-list/le-masteros-paletas>https://lospec.com/palette-list/le-masteros-paletas</a></td></tr>
     <tr><td>Lux2k_36</td><td><img src='./Lux2k_36.png'></td><td><a href=https://lospec.com/palette-list/lux2k>https://lospec.com/palette-list/lux2k</a></td></tr>
-    <tr><td>MF_16</td><td><img src='./MF_16.png'></td><td><a href=https://lospec.com/palette-list/mf-16>https://lospec.com/palette-list/mf-16</a></td></tr>
+    <tr><td>MG_16</td><td><img src='./MF_16.png'></td><td><a href=https://lospec.com/palette-list/mf-16>https://lospec.com/palette-list/mf-16</a></td></tr>
     <tr><td>Mist_GB</td><td><img src='./Mist_GB.png'></td><td><a href=https://lospec.com/palette-list/mist-gb>https://lospec.com/palette-list/mist-gb</a></td></tr>
     <tr><td>NES</td><td><img src='./NES.png'></td><td><a href=https://lospec.com/palette-list/nintendo-entertainment-system>https://lospec.com/palette-list/nintendo-entertainment-system</a></td></tr>
     <tr><td>Nostalgia_36</td><td><img src='./Nostalgia_36.png'></td><td><a href=https://lospec.com/palette-list/nostalgia36>https://lospec.com/palette-list/nostalgia36</a></td></tr>

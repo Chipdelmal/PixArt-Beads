@@ -1,6 +1,5 @@
 
-import cv2
-import numpy as np
+import os
 from os.path import exists
 from glob import glob
 from sys import argv
@@ -10,18 +9,19 @@ from cv2 import imread, imwrite, cvtColor
 import matplotlib.pyplot as plt
 import colors as col
 import auxiliary as aux
-
+os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH")
 
 if aux.isNotebook():
     (BASE_PATH, PNG_NAME, PAL_NAME) = (
-        '/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/BlueMoon', 
-        'rocketsPalette.png', 'GB_5.plt'
+        '/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/Portraits', 
+        'sami.png', 'Sweetie_16.plt'
     )
-    (DOWNSCALE, UPSCALE, QNT_MTHD, DWN_MTHD) = (48, 10, 0, Image.BILINEAR)
+    (DOWNSCALE, UPSCALE) = (48, 10)
 else:
-    (BASE_PATH, PNG_NAME, DOWNSCALE) = (argv[1], argv[2], int(argv[3]))
-
-(outRadius, inRadius, bgColor, imgAlpha) = (.975 , .2, '#eeeeee', .9)
+    (BASE_PATH, PNG_NAME, PAL_NAME) = (argv[1], argv[2], argv[3])
+    (DOWNSCALE, UPSCALE) = (int(argv[4]), int(argv[5]))
+# Internal constants ----------------------------------------------------------
+(QNT_MTHD, DWN_MTHD) = (aux.MTHDS[0], aux.MTHDS[1])
 ###############################################################################
 # Folders and Filenames
 ###############################################################################
@@ -47,11 +47,14 @@ if exists(fileMapper):
 # Quantize
 #   0: median cut, 1: maximum coverage, 2: fast octree
 ###############################################################################
-palDict = aux.readPaletteFile(path.join(BASE_PATH, PAL_NAME))
-cpal = aux.paletteReshape(palDict['palette'])
-imgQnt = aux.quantizeImage(
-    img, colorsNumber=cpal[0], colorPalette=cpal[1], method=QNT_MTHD
-)
+if aux.isInt(PAL_NAME):
+    imgQnt = aux.quantizeImage(img, int(PAL_NAME), method=QNT_MTHD)
+else:
+    palDict = aux.readPaletteFile(path.join(BASE_PATH, PAL_NAME))
+    cpal = aux.paletteReshape(palDict['palette'])
+    imgQnt = aux.quantizeImage(
+        img, colorsNumber=cpal[0], colorPalette=cpal[1], method=QNT_MTHD
+    )
 # imgQnt.save(pthQNT)
 ###############################################################################
 # Downscale
@@ -77,13 +80,13 @@ imwrite(pthGRD, imgGrd)
 ###############################################################################
 imgTmp = imread(pthDWN)
 (fig, ax) = aux.genBeadsPlot(
-    imgTmp, bgColor=bgColor,
-    outRadius=outRadius, inRadius=inRadius, imgAlpha=imgAlpha
+    imgTmp, bgColor=aux.BEAD_BKG,
+    inRadius=aux.RADII[0], outRadius=aux.RADII[1], imgAlpha=aux.BEAD_ALPHA
 )
 plt.savefig(
     pthBDS, 
-    bbox_inches='tight', pad_inches=0, dpi=200,
-    facecolor=[i/255 for i in ImageColor.getcolor(bgColor, "RGB")]
+    bbox_inches='tight', pad_inches=0, dpi=100,
+    facecolor=[i/255 for i in ImageColor.getcolor(aux.BEAD_BKG, "RGB")]
 )
 plt.close('all')
 ###############################################################################
@@ -98,7 +101,7 @@ imgSwt = aux.genColorCounts(swatch, 500, imgBDS.size[1])
 plt.savefig(
     pthSWT, 
     bbox_inches='tight', pad_inches=0,
-    facecolor=[i/255 for i in ImageColor.getcolor(bgColor, "RGB")]
+    facecolor=[i/255 for i in ImageColor.getcolor(aux.BEAD_BKG, "RGB")]
 )
 plt.close('all')
 ###############################################################################

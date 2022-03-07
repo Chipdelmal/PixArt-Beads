@@ -14,6 +14,9 @@ import matplotlib.patches as mpatch
 
 PPND = ('A-', 'B-', 'C-', 'D-')
 FIDS = ('QNT', 'DWN', 'UPS', 'GRD', 'SWT', 'BDS', 'FNL')
+MTHDS = (0, Image.BILINEAR)
+RADII = (0.2, 0.975)
+(BEAD_ALPHA, BEAD_BKG) = (0.9, '#fefefe')
 
 def paletteReshape(colorPalette):
     # Hex to entries
@@ -187,7 +190,7 @@ def getLuma(r, g, b):
 def genColorCounts(
         imgPalette, width, height, 
         fontdict = {'family':'monospace', 'weight':'bold', 'size':50},
-        xlim = (0, .8)
+        xlim = (0, 1.25)
     ):
     pal = imgPalette
     # Create canvas
@@ -208,7 +211,7 @@ def genColorCounts(
         y_pos = (j%(n_rows))*hr
         # Print rectangle and text
         hshift = .05
-        ax.add_patch(mpatch.Rectangle((hshift+col_shift, y_pos), wr, hr, color=rgb, ec='k'))
+        ax.add_patch(mpatch.Rectangle((hshift+col_shift, y_pos), wr, hr, color=rgb, ec='k', lw=4))
         ax.text(
             hshift+wr*1.1+col_shift, y_pos+hr/2, f'{color} ({count:04})', 
             color='k', va='center', ha='left', fontdict=fontdict
@@ -253,3 +256,11 @@ def vConcat(im1, im2):
     dst.paste(im1, (0, 0))
     dst.paste(im2, (0, im1.height))
     return dst
+
+
+def isInt(element):
+    try:
+        int(element)
+        return True
+    except ValueError:
+        return False

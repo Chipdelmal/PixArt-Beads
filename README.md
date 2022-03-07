@@ -4,6 +4,7 @@ This repo contains some python scripts that should be useful in transforming ima
 
 <img src="./media/sami.png" height="200px"><img src="./media/B-SGB_M1A-sami.png" height="200px" ><img src="./media/C-SGB_M1A-sami.png" height="200px"><img src="./media/D-SGB_M1A-sami.png" height="200px">
 
+
 Some of the features are:
 
 * Color quantization: with the option to use number of colors, provided or user-defined color palettes.

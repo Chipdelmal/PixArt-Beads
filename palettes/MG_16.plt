@@ -1,4 +1,4 @@
-MF_16
+MG_16
 https://lospec.com/palette-list/mf-16
 #160b27
 #3e4768
