@@ -84,8 +84,7 @@ imgTmp = imread(pthDWN)
     inRadius=aux.RADII[0], outRadius=aux.RADII[1], imgAlpha=aux.BEAD_ALPHA
 )
 plt.savefig(
-    pthBDS, 
-    bbox_inches='tight', pad_inches=0, dpi=100,
+    pthBDS, bbox_inches='tight', pad_inches=0, dpi=100,
     facecolor=[i/255 for i in ImageColor.getcolor(aux.BEAD_BKG, "RGB")]
 )
 plt.close('all')
@@ -99,8 +98,7 @@ plt.close('all')
 swatch = aux.getImagePalette(imgTmp)
 imgSwt = aux.genColorCounts(swatch, 500, imgBDS.size[1])
 plt.savefig(
-    pthSWT, 
-    bbox_inches='tight', pad_inches=0,
+    pthSWT, bbox_inches='tight', pad_inches=0,
     facecolor=[i/255 for i in ImageColor.getcolor(aux.BEAD_BKG, "RGB")]
 )
 plt.close('all')
