@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###############################################################################
-# Inputs
+# PixArt Beads
 # -----------------------------------------------------------------------------
 #   PTH: Path to where the images are stored, along with palettes and cmapper
 #   DWN: Downscale width in px (if set to 0, it will maintain the original)

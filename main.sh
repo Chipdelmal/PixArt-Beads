@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###############################################################################
-# Inputs
+# PixArt Beads
 # -----------------------------------------------------------------------------
 #   PTH: Path to where the image is stored along with palettes and cmapper
 #   IMG: Image name with extension (PNG files only)

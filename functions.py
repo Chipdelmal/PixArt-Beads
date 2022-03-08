@@ -6,18 +6,23 @@ import re
 import os
 import cv2
 import numpy as np
+from cv2 import cvtColor
+import matplotlib.pyplot as plt
 from PIL import Image, ImageColor
-from cv2 import imread, cvtColor
-import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
 import matplotlib.patches as mpatch
 
-PPND = ('A-', 'B-', 'C-', 'D-')
+###############################################################################
+# Globals 
+###############################################################################
 FIDS = ('QNT', 'DWN', 'UPS', 'GRD', 'SWT', 'BDS', 'FNL')
 MTHDS = (0, Image.BILINEAR)
 RADII = (0.2, 0.975)
 (BEAD_ALPHA, BEAD_BKG) = (0.9, '#fefefe')
+SLEEP = 5
 
+###############################################################################
+# Functions 
+###############################################################################
 def paletteReshape(colorPalette):
     # Hex to entries
     rgbTuples = [ImageColor.getrgb(i) for i in colorPalette]

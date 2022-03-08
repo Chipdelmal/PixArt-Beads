@@ -14,6 +14,8 @@ Some of the main features are:
 
 ## Instructions
 
+**IMPORTANT NOTE:** For a step-by-step use of the scripts, please have a look at the provided [demo](./demo) after installing the dependencies.
+
 To use the scripts first install the required dependencies either through the REQUIREMENTS files (`txt`/`yml`), or manually:
 
 ```bash
@@ -29,7 +31,7 @@ Give the bash script executable permissions:
 chmod +x main.sh
 ```
 
-And then run the script as follows:
+And then run it as follows:
 
 ```bash
 ./main.sh $PTH $IMG $DWN $UPS $DBG
@@ -47,7 +49,13 @@ This will take the `IMG` in the set `PTH` along with all the `*.plt` files store
 ./batch.sh $PTH $DWN $UPS $DBG
 ```
 
-**NOTE:** For a step-by-step use of the scripts, please have a look at the provided [demo](./demo).
+Finally, the script can also be called from python with:
+
+```bash
+python main.py $PTH $IMG $PAL $DWN $UPS $DBG
+```
+
+where an additional parameter `PAL` is needed for the color palette filename (if set to a number instead of a `.plt` file, it will instead quantize to the provided number of colors.
 
 ## Available Palettes
 
