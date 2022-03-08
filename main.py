@@ -10,8 +10,8 @@ import auxiliary as aux
 
 if aux.isNotebook():
     (BASE_PATH, PNG_NAME, PAL_NAME) = (
-        '/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/Portraits', 
-        'sami.png', 'Sweetie_16.plt'
+        '/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/BlueMoon', 
+        'cruiserPalette.png', 'Sweetie_16.plt'
     )
     (DOWNSCALE, UPSCALE) = (48, 10)
     DEBUG = True
@@ -96,7 +96,7 @@ plt.close('all')
     Image.open(pthDWN).convert('RGB')
 )
 swatch = aux.getImagePalette(imgTmp)
-imgSwt = aux.genColorCounts(swatch, 500, imgBDS.size[1])
+imgSwt = aux.genColorCounts(swatch, 500, imgBDS.size[1], imgBDS.size, UPSCALE)
 plt.savefig(
     pthSWT, bbox_inches='tight', pad_inches=0,
     facecolor=[i/255 for i in ImageColor.getcolor(aux.BEAD_BKG, "RGB")]

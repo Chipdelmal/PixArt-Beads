@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-PTH="/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/BlueMoon"
+PTH="/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/OrangeStar"
 DWN="0"
 UPS="10"
 DBG="0"
@@ -27,3 +26,4 @@ for nme in ${PNGS[@]}; do
         python main.py $PTH $FNM $PAL $DWN $UPS $DBG
     done
 done
+printf "\r\n"

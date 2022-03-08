@@ -5,19 +5,18 @@ This repo contains some python scripts that should be useful in transforming ima
 <img src="./media/sami.png" height="200px"><img src="./media/B-SGB_M1A-sami.png" height="200px" ><img src="./media/C-SGB_M1A-sami.png" height="200px"><img src="./media/D-SGB_M1A-sami.png" height="200px">
 
 
-Some of the features are:
+Some of the main features are:
 
 * Color quantization: with the option to use number of colors, provided or user-defined color palettes.
 * Image downscale: 
 * Image upscale:
-* Color replace:
 * Color mapping: 
 * Color palette:
 * Color counts:
 
 ## Instructions
 
-To use the scripts first install the required dependencies either through the REQUIREMENTS files (txt/yml), or manually:
+To use the scripts first install the required dependencies either through the REQUIREMENTS files (`txt`/`yml`), or manually:
 
 ```bash
 pip install numpy
@@ -26,22 +25,31 @@ pip install matplotlib
 pip install opencv-python
 ```
 
-And, ideally, give the bash script executable permissions:
+Give the bash script executable permissions:
 
 ```bash
-chmod +x beadify.sh
+chmod +x main.sh
 ```
 
+And then run the script as follows:
 
-Then have a look at the following parameters:
+```bash
+./main.sh $PTH $IMG $DWN $UPS $DBG
+```
 
-* Folder (fld): Working directory for input and output images
-* Name (nme): Original image's name
-* Downscale: (w, h) tuple of the number of pixels of our beads pattern
-* Upscale: Multiplier scaler to upscale our pixelated image for easy reading
-* Colors Number (colorsNumber): Number of colors to be used in the quantization process (overridden if the color palette is provided)
-* Color Palette (colorPalette): List of HEX values to be used in the quantization of the image. Set color palette to "None" to use the colorsNumber parameter instead.
-* Method (int): [0: median cut, 1: maximum coverage, 2: fast octree]
+`PTH`: Folder in which our image(s) are stored along with the palettes and color mapper.
+`IMG`: Image name for the file to be processed.
+`DWN`: Width in pixels for our output image (leave as `0` if no downscaling is desired).
+`UPS`: Upscaler multiplier for the plots (`10`, the suggested value, will multiply the dimensions of the downscaled images by ten when exporting the output).
+`DBG`: Debug mode (leave as `0` if no intermediary output is desired, and as `1` to have each intermediate plot exported).
+
+This will take the `IMG` in the set `PTH` along with all the `*.plt` files stored in the directory and the `CMapper.map`, and generate a nested output folder (in the same directory) with the bead plots. Alternatively, we can use the `batch.sh` file to process all the images stored in the same directory:
+
+```bash
+./batch.sh $PTH $DWN $UPS $DBG
+```
+
+**NOTE:** For a step-by-step use of the scripts, please have a look at the provided [demo](./demo).
 
 ## Available Palettes
 
@@ -50,7 +58,6 @@ Some nice [color palettes](./palettes/README.md) are included in the scripts, bu
 <table>
     <tr><th>Code</th><th>Palette</th><th>Source</th></tr>
     <!--Table Begins-->
-    <tr><td>Blessing_5</td><td><img src='./palettes/Blessing_5.png'></td><td><a href=https://lospec.com/palette-list/blessing>https://lospec.com/palette-list/blessing</a></td></tr>
     <tr><td>CoolWood_8</td><td><img src='./palettes/CoolWood_8.png'></td><td><a href=https://lospec.com/palette-list/coldwood8>https://lospec.com/palette-list/coldwood8</a></td></tr>
     <tr><td>Gray2Bit_4</td><td><img src='./palettes/Gray2Bit_4.png'></td><td><a href=https://lospec.com/palette-list/2-bit-grayscale>https://lospec.com/palette-list/2-bit-grayscale</a></td></tr>
     <tr><td>IslandJoy_16</td><td><img src='./palettes/IslandJoy_16.png'></td><td><a href=https://lospec.com/palette-list/island-joy-16>https://lospec.com/palette-list/island-joy-16</a></td></tr>
@@ -58,7 +65,6 @@ Some nice [color palettes](./palettes/README.md) are included in the scripts, bu
     <tr><td>Mist_GB</td><td><img src='./palettes/Mist_GB.png'></td><td><a href=https://lospec.com/palette-list/mist-gb>https://lospec.com/palette-list/mist-gb</a></td></tr>
     <tr><td>NES</td><td><img src='./palettes/NES.png'></td><td><a href=https://lospec.com/palette-list/nintendo-entertainment-system>https://lospec.com/palette-list/nintendo-entertainment-system</a></td></tr>
     <tr><td>Nostalgia_36</td><td><img src='./palettes/Nostalgia_36.png'></td><td><a href=https://lospec.com/palette-list/nostalgia36>https://lospec.com/palette-list/nostalgia36</a></td></tr>
-    <tr><td>OneBitGlow_2</td><td><img src='./palettes/OneBitGlow_2.png'></td><td><a href=https://lospec.com/palette-list/1bit-monitor-glow>https://lospec.com/palette-list/1bit-monitor-glow</a></td></tr>
     <tr><td>Super_16</td><td><img src='./palettes/Super_16.png'></td><td><a href=https://lospec.com/palette-list/super16>https://lospec.com/palette-list/super16</a></td></tr>
     <tr><td>Sweetie_16</td><td><img src='./palettes/Sweetie_16.png'></td><td><a href=https://lospec.com/palette-list/sweetie-16>https://lospec.com/palette-list/sweetie-16</a></td></tr>
 </table> 

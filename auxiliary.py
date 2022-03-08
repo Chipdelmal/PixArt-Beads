@@ -188,8 +188,8 @@ def getLuma(r, g, b):
 
 
 def genColorCounts(
-        imgPalette, width, height, 
-        fontdict = {'family':'monospace', 'weight':'normal', 'size':40},
+        imgPalette, width, height, imgSize, upscale,
+        fontdict = {'family':'monospace', 'weight':'normal', 'size':37.5},
         xlim = (0, 1.25)
     ):
     pal = imgPalette
@@ -211,12 +211,29 @@ def genColorCounts(
         y_pos = (j%(n_rows))*hr
         # Print rectangle and text
         hshift = .05
-        ax.add_patch(mpatch.Rectangle((hshift+col_shift, y_pos), wr, hr, color=rgb, ec='k', lw=4))
+        ax.add_patch(mpatch.Rectangle(
+            (hshift+col_shift, y_pos), wr, hr, color=rgb, ec='k', lw=4
+        ))
         colorText = color.upper()
         ax.text(
-            hshift+wr*1.1+col_shift, y_pos+hr/2, f'{colorText} ({count:05}) ', 
+            hshift+wr*1.1+col_shift, y_pos+hr/2, 
+            f' {colorText} ({count:05}) ', 
             color='k', va='center', ha='left', fontdict=fontdict
         )
+    # Add pixel size and total count
+    pxSize = [int(i/upscale) for i in imgSize]
+    y_pos = ((0)%(n_rows))*hr
+    ax.text(
+        hshift, y_pos-hr/2, 
+        f'Size: {pxSize[0]}x{pxSize[1]}', 
+        color='k', va='center', ha='left', fontdict=fontdict
+    )
+    y_pos = ((j+1)%(n_rows))*hr
+    ax.text(
+        hshift, y_pos+hr/2, 
+        f'Total: {pxSize[0]*pxSize[1]}', 
+        color='k', va='center', ha='left', fontdict=fontdict
+    )
     # Clean up the axes
     ax.set_xlim(xlim[0], xlim[1]*n_groups)
     ax.set_ylim((n_rows), -1)
