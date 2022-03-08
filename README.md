@@ -7,12 +7,10 @@ This repo contains some python scripts that should be useful in transforming ima
 
 Some of the main features are:
 
-* Color quantization: with the option to use number of colors, provided or user-defined color palettes.
-* Image downscale: 
-* Image upscale:
-* Color mapping: 
-* Color palette:
-* Color counts:
+* **Color quantization:** with the option to use number of colors, provided or user-defined color palettes.
+* **Image downscale:** take an image and downsize it to a desired number of pixels.
+* **Color mapping:** manually change colors to do things like remove the background.
+* **Color counts:** count the number of beads of each color that are needed for our handcraft.
 
 ## Instructions
 
@@ -53,7 +51,7 @@ This will take the `IMG` in the set `PTH` along with all the `*.plt` files store
 
 ## Available Palettes
 
-Some nice [color palettes](./palettes/README.md) are included in the scripts, but if you have the hex colors of your beads, please follow [this link](./palettes/README.md) for information on how to use them in your handcraft! A subset of the included palettes is shown but follow the [link](./palettes/README.md) for the full list:
+Some nice [color palettes](./palettes/README.md) are included in the scripts, but if you have the hex colors of your beads, please follow [this link](./palettes/README.md) for information on how to use them in your handcraft! A subset of the included palettes is shown but follow the [link for the full list](./palettes/README.md):
 
 <table>
     <tr><th>Code</th><th>Palette</th><th>Source</th></tr>
