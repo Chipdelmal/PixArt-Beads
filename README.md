@@ -2,8 +2,7 @@
 
 This repo contains some python scripts that should be useful in transforming images into pixel-beads images and handcrafts!
 
-<img src="./media/sami.png" height="200px"><img src="./media/B-SGB_M1A-sami.png" height="200px" ><img src="./media/C-SGB_M1A-sami.png" height="200px"><img src="./media/D-SGB_M1A-sami.png" height="200px">
-
+<img src="./media/sami.png" width="200px"><img src="./media/B-SGB_M1A-sami.png" width="200px" ><img src="./media/C-SGB_M1A-sami.png" width="200px"><img src="./media/D-SGB_M1A-sami.png" width="200px">
 
 Some of the main features are:
 
@@ -12,6 +11,7 @@ Some of the main features are:
 * **Color mapping:** manually change colors to do things like remove the background.
 * **Color counts:** count the number of beads of each color that are needed for our handcraft.
 
+<img src="./media/FNL-SGBM1A_4-sami.png" width="800px">
 ## Instructions
 
 **IMPORTANT NOTE:** For a step-by-step use of the scripts, please have a look at the provided [demo](./demo) after installing the dependencies.
