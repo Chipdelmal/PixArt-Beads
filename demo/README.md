@@ -50,6 +50,7 @@ This script will generate the following images in a `TransportCopter` folder (in
 * **FNL**: Beads with swatch and color counts
 
 <img src="../media/DWN-BlkNeo_46-TransportCopter.png" width="100px"><img src="../media/UPS-BlkNeo_46-TransportCopter.png" width="100px"><img src="../media/GRD-BlkNeo_46-TransportCopter.png" width="100px"><img src="../media/BDS-BlkNeo_46-TransportCopter.png" width="100px">
+
 <img src="../media/FNL-BlkNeo_46-TransportCopter.png" width="400px">
 
 ## Processing a batch of images
