@@ -54,3 +54,11 @@ This script will generate the following images in a `TransportCopter` folder (in
 <img src="../media/FNL-BlkNeo_46-TransportCopter.png" width="400px">
 
 ## Processing a batch of images
+
+If we wanted to process a batch of images through the same color palettes and with the same scaling properties, we simply need to place them in the same directory as before, and call:
+
+```bash
+./batch.sh ./demo/tCopter 0 10 0
+```
+
+This time, we are keeping the images in their original size, upscaling them by a factor of 10, and turning the debug mode off.
