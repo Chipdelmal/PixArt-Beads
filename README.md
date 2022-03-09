@@ -12,6 +12,8 @@ Some of the main features are:
 * **Color counts:** count the number of beads of each color that are needed for our handcraft.
 
 <img src="./media/FNL-SGBM1A_4-sami.png" width="800px">
+
+
 ## Instructions
 
 **IMPORTANT NOTE:** For a step-by-step use of the scripts, please have a look at the provided [demo](./demo) after installing the dependencies.

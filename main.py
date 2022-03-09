@@ -96,12 +96,13 @@ sleep(fun.SLEEP)
 ###############################################################################
 # Swatch
 ###############################################################################
-(imgBDS, imgTmp) = (
+(imgBDS, imgTmp, imgDwn) = (
     Image.open(pthBDS).convert('RGB'),
+    Image.open(pthDWN).convert('RGB'),
     Image.open(pthDWN).convert('RGB')
 )
 swatch = fun.getImagePalette(imgTmp)
-imgSwt = fun.genColorCounts(swatch, 500, imgBDS.size[1], imgBDS.size, UPSCALE)
+imgSwt = fun.genColorCounts(swatch, 500, imgBDS.size[1], imgDwn.size)
 plt.savefig(
     pthSWT, bbox_inches='tight', pad_inches=0,
     facecolor=[i/255 for i in ImageColor.getcolor(fun.BEAD_BKG, "RGB")]

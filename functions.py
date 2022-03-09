@@ -193,7 +193,7 @@ def getLuma(r, g, b):
 
 
 def genColorCounts(
-        imgPalette, width, height, imgSize, upscale,
+        imgPalette, width, height, imgSize, upscale=1,
         fontdict = {'family':'monospace', 'weight':'normal', 'size':37.5},
         xlim = (0, 1.25)
     ):

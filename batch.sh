@@ -8,10 +8,10 @@
 #   UPS: Upscale multiplier (10x is recommended for most images)
 #   DBG: Debug mode (set to 1 for all the intermediate images to be kept)
 ###############################################################################
-PTH="/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/OrangeStar"
+PTH="/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/Portraits"
 DWN="0"
 UPS="10"
-DBG="0"
+DBG="1"
 ###############################################################################
 # Get Palettes in folder
 ###############################################################################
