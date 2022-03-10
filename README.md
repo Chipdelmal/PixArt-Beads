@@ -40,11 +40,11 @@ And then run it as follows:
 ./main.sh $PTH $IMG $DWN $UPS $DBG
 ```
 
-`PTH`: Folder in which our image(s) are stored along with the palettes and color mapper.
-`IMG`: Image name for the file to be processed.
-`DWN`: Width in pixels for our output image (leave as `0` if no downscaling is desired).
-`UPS`: Upscaler multiplier for the plots (`10`, the suggested value, will multiply the dimensions of the downscaled images by ten when exporting the output).
-`DBG`: Debug mode (leave as `0` if no intermediary output is desired, and as `1` to have each intermediate plot exported).
+* `PTH`: Folder in which our image(s) are stored along with the palettes and color mapper.
+* `IMG`: Image name for the file to be processed.
+* `DWN`: Width in pixels for our output image (leave as `0` if no downscaling is desired).
+* `UPS`: Upscaler multiplier for the plots (`10`, the suggested value, will multiply the dimensions of the downscaled images by ten when exporting the output).
+* `DBG`: Debug mode (leave as `0` if no intermediary output is desired, and as `1` to have each intermediate plot exported).
 
 This will take the `IMG` in the set `PTH` along with all the `*.plt` files stored in the directory and the `CMapper.map`, and generate a nested output folder (in the same directory) with the bead plots. Alternatively, we can use the `batch.sh` file to process all the images stored in the same directory:
 
