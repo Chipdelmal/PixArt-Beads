@@ -1,9 +1,11 @@
 
-# PixArt Beads: Demo
+# PixArt Beads: Demos
+
+These examples show some use-cases for the scripts!
 
 ## Processing a single image
 
-For this demo we're gonna process a sprite from [Advance Wars](https://www.spriters-resource.com/game_boy_advance/advancewars2blackholerising/) (a great site for getting some nice sprites is: [the spriters resource](https://www.spriters-resource.com/).
+For this demo we're gonna process a sprite from [Advance Wars](https://www.spriters-resource.com/game_boy_advance/advancewars2blackholerising/) (a great site for getting some nice sprites is: [the spriters resource](https://www.spriters-resource.com/). The files needed to run this demo can be found in [this folder](./tCopter).
 
 <img src="../media/tcopterPalette.png" width="100px">
 
@@ -55,10 +57,18 @@ This script will generate the following images in a `TransportCopter` folder (in
 
 ## Processing a batch of images
 
-If we wanted to process a batch of images through the same color palettes and with the same scaling properties, we simply need to place them in the same directory as before, and call:
+Now, let's imagine we wanted to process several images through the same color palettes. For this example, we will use the files in [this folder](./copters).
+
+<img src="../media/BattleCopter.png" height="100px"> <img src="../media/TransportCopter.png" height="100px">
+
+To do this, we place all the palettes `.plt` files, images and the `CMapping.map` in the base folder and simply call:
 
 ```bash
-./batch.sh ./demo/tCopter 0 10 0
+./batch.sh ./demo/copters 0 10 0
 ```
 
 This time, we are keeping the images in their original size, upscaling them by a factor of 10, and turning the debug mode off.
+
+<img src="../media/FNL-Pilxten_41-TransportCopter.png" width="300px"> <img src="../media/FNL-BlkNeo_46-TransportCopter2.png" width="300px">
+
+<img src="../media/FNL-Pilxten_41-BattleCopter.png" width="300px"> <img src="../media/FNL-BlkNeo_46-BattleCopter.png" width="300px">

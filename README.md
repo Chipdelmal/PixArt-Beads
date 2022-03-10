@@ -2,7 +2,8 @@
 
 This repo contains some python scripts that should be useful in transforming images into pixel-beads images and handcrafts!
 
-<img src="./media/sami.png" width="200px"><img src="./media/B-SGB_M1A-sami.png" width="200px" ><img src="./media/C-SGB_M1A-sami.png" width="200px"><img src="./media/D-SGB_M1A-sami.png" width="200px">
+<img src="./media/FNL-Pilxten_41-TransportCopter.png" width="300px"> <img src="./media/FNL-Pilxten_41-BattleCopter.png" width="300px">
+
 
 Some of the main features are:
 
@@ -11,8 +12,8 @@ Some of the main features are:
 * **Color mapping:** manually change colors to do things like remove the background.
 * **Color counts:** count the number of beads of each color that are needed for our handcraft.
 
-<img src="./media/FNL-SGBM1A_4-sami.png" width="800px">
 
+<img src="./media/sami.png" width="200px"><img src="./media/B-SGB_M1A-sami.png" width="200px" ><img src="./media/C-SGB_M1A-sami.png" width="200px"><img src="./media/D-SGB_M1A-sami.png" width="200px">
 
 ## Instructions
 
@@ -59,6 +60,9 @@ python main.py $PTH $IMG $PAL $DWN $UPS $DBG
 
 where an additional parameter `PAL` is needed for the color palette filename (if set to a number instead of a `.plt` file, it will instead quantize to the provided number of colors.
 
+
+<img src="./media/FNL-SGBM1A_4-sami.png" width="800px">
+
 ## Available Palettes
 
 Some nice [color palettes](./palettes/README.md) are included in the scripts, but if you have the hex colors of your beads, please follow [this link](./palettes/README.md) for information on how to use them in your handcraft! A subset of the included palettes is shown but follow the [link for the full list](./palettes/README.md):
@@ -79,6 +83,6 @@ Some nice [color palettes](./palettes/README.md) are included in the scripts, bu
 
 ##  Author
 
-<img src="./media/pusheen.jpg" height="100px" align="middle"><br>
+<img src="./media/pusheen.png" height="100px" align="middle"><br>
 
 [Héctor M. Sánchez C.](https://chipdelmal.github.io/)

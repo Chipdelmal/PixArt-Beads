@@ -14,11 +14,6 @@ IMG=$2
 DWN=$3
 UPS=$4
 DBG=$5
-# PTH="/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/OrangeStar"
-# IMG="tcopterPalette.png"
-# DWN="0"
-# UPS="10"
-# DBG="0"
 ###############################################################################
 # Terminal colors
 ###############################################################################
