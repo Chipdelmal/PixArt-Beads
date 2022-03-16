@@ -83,6 +83,8 @@ Some nice [color palettes](./palettes/README.md) are included in the scripts, bu
 
 ##  Author
 
+For more info, have a look at my accompanying [blog post](https://chipdelmal.github.io/artsci/2022-03-10-PixelArt.html) describing the processing pipeline!
+
 <img src="./media/pusheen.png" height="100px" align="middle"><br>
 
 [Héctor M. Sánchez C.](https://chipdelmal.github.io/)
