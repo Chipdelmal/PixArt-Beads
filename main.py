@@ -11,10 +11,10 @@ import functions as fun
 
 if fun.isNotebook():
     (BASE_PATH, PNG_NAME, PAL_NAME) = (
-        '/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/BlueMoon', 
-        'cruiserPalette.png', 'Sweetie_16.plt'
+        '/home/chipdelmal/Documents/PixelatorBeads/AdvanceWars/Portraits/', 
+        'sonja.png', 'Pear_36.plt'
     )
-    (DOWNSCALE, UPSCALE) = (48, 10)
+    (DOWNSCALE, UPSCALE) = ((50,50), 10)
     DEBUG = True
 else:
     os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH")

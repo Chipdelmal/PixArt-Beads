@@ -17,7 +17,7 @@ import matplotlib.patches as mpatch
 FIDS = ('QNT', 'DWN', 'UPS', 'GRD', 'SWT', 'BDS', 'FNL')
 MTHDS = (0, Image.BILINEAR)
 RADII = (0.2, 0.975)
-(BEAD_ALPHA, BEAD_BKG) = (0.9, '#fefefe')
+(BEAD_ALPHA, BEAD_BKG) = (0.975, '#fefefe')
 SLEEP = 5
 
 ###############################################################################
@@ -172,7 +172,6 @@ def getImagePalette(img):
     return hexPalette
 
 
-
 def genColorSwatch(palette, width, height):
     colors = [ImageColor.getcolor(i, "RGB") for i in palette]
     clstNumber = len(colors)
@@ -194,7 +193,7 @@ def getLuma(r, g, b):
 
 def genColorCounts(
         imgPalette, width, height, imgSize, upscale=1,
-        fontdict = {'family':'monospace', 'weight':'normal', 'size':37.5},
+        fontdict = {'family':'monospace', 'weight':'normal', 'size':30},
         xlim = (0, 1.25)
     ):
     pal = imgPalette
